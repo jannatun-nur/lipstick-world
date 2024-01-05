@@ -9,6 +9,7 @@ import {
 import Root from './Root/Root';
 import Home from './Pages/Home/Home';
 import AuthProvider from './Provider/AuthProvider';
+import Buy from './Pages/Home/BuyProduct/Buy';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home/>
+      },
+      {
+        path:'/buy',
+        element:<Buy/>
       }
     ]
   },
