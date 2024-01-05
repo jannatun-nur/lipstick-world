@@ -1,8 +1,7 @@
-import { FaRegHeart } from "react-icons/fa";
 
 
 const BuyCard = ({ buys }) => {
-  const { name, image , title ,price, in_stock } = buys;
+  const { name, image , title ,price, in_stock, button } = buys;
   return (
     <div className="">
       <div className="rounded-md shadow-md sm:w-52 bg-white text-pink-700 border border-black">
@@ -41,7 +40,7 @@ const BuyCard = ({ buys }) => {
             <p className="text-sm">
               <span className="text-xl font-semibold">{name}</span>
             </p>
-            <p><FaRegHeart /></p>
+           
             </div>
             <p>
                 {title}
@@ -53,6 +52,7 @@ const BuyCard = ({ buys }) => {
             {in_stock}
            </p>
           </div>
+          <button className="px-2 border border-pink-500 rounded-lg mt-2 font-semibold">{button}</button>
         </div>
       </div>
     </div>

@@ -24,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:'/buy',
         element:<Buy/>
+      },
+      {
+        path:'/buylipstic',
+        element
       }
     ]
   },
