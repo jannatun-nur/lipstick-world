@@ -1,0 +1,44 @@
+[
+    {
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock":"in_stock",
+  "wishlist": false
+},
+{
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock":"in_stock",
+  "wishlist": false
+},
+{
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock": "in_stock",
+  "wishlist": false
+},
+{
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock": true,
+  "wishlist": false
+},
+{
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock":"in_stock",
+  "wishlist": false
+},
+{
+  "image_name": "product6.jpg",
+  "title": "Coffee Maker",
+  "price": 89.99,
+  "in_stock":"in_stock",
+  "wishlist": false
+}
+]
