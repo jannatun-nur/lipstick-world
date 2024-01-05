@@ -1,48 +1,54 @@
 [
     {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
+   "name": "Lipstick Wham A20",
+  "image": "https://i.ibb.co/w78Mq5r/WHAM.jpg",
+  "title": "New collection for you.",
+  "price":350,
   "in_stock":"in_stock",
   "wishlist": false,
   "button" :"Buy Now"
 },
 {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
+  "name": "Pink Nouveu A32",
+  "image": "https://i.ibb.co/jbB7BV8/nua.jpg",
+  "title": "New collection for you.",
+  "price":270,
   "in_stock":"in_stock",
   "wishlist": false,
   "button" :"Buy Now"
 },
 {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
+  "name": "Viva Glam Nicki A38",
+  "image": "https://i.ibb.co/GRCQPHd/viva.jpg",
+  "title": "New collection for you.",
+  "price":340,
   "in_stock": "in_stock",
   "wishlist": false,
   "button" :"Buy Now"
 },
 {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
-  "in_stock": true,
+  "name": "Show Orchid A42",
+      "image": "https://i.ibb.co/HKjJ48k/show.jpg",
+  "title": "New collection for you.",
+  "price": 290,
+  "in_stock": "in_stock",
   "wishlist": false,
   "button" :"Buy Now"
 },
 {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
+  "name": "Russian Red A12",
+      "image": "https://i.ibb.co/1v6LmYq/russi.jpg",
+  "title": "New collection for you.",
+  "price": 300,
   "in_stock":"in_stock",
   "wishlist": false,
   "button" :"Buy Now"
 },
 {
-  "image_name": "product6.jpg",
-  "title": "Coffee Maker",
-  "price": 89.99,
+  "name": "Lady Denger A10",
+  "image": "https://i.ibb.co/kQkR1z5/lady.jpg",
+  "title": "New collection for you.",
+  "price":210,
   "in_stock":"in_stock",
   "wishlist": false,
   "button" :"Buy Now"
