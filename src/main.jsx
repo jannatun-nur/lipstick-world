@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element:<Buy/>
       },
       {
-        path:'/buylipstic',
+        path:'/buylipstick',
         element:<AddProduct/>
       }
     ]
