@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const BuyCard = ({ buys }) => {
@@ -52,7 +53,9 @@ const BuyCard = ({ buys }) => {
             {in_stock}
            </p>
           </div>
-          <button className="px-2 border border-pink-500 rounded-lg mt-2 font-semibold">{button}</button>
+         <Link to="buylipstick">
+         <button className="px-2 border border-pink-500 rounded-lg mt-2 font-semibold">{button}</button>
+         </Link>
         </div>
       </div>
     </div>

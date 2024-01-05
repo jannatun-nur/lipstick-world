@@ -10,6 +10,7 @@ import Root from './Root/Root';
 import Home from './Pages/Home/Home';
 import AuthProvider from './Provider/AuthProvider';
 import Buy from './Pages/Home/BuyProduct/Buy';
+import AddProduct from './Pages/Home/AddProduct/AddProduct';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/buylipstic',
-        element
+        element:<AddProduct/>
       }
     ]
   },
