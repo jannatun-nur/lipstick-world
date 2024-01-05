@@ -1,10 +1,15 @@
-import { useState } from "react";
-
+import { useContext, useState } from "react";
+import { AuthContext } from '../../../Provider/AuthProvider';
+import Swal from 'sweetalert2'
+import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const SignUp = () => {
 
+ const {createUser} = useContext(AuthContext)
 
-    const [error , setError] = useState('')
+    const [error , setError] = useState('');
+    const [ success , setSucces] = useState('')
 
     const handleSignup = (event) =>{
         event.preventDefault()
@@ -13,8 +18,47 @@ const SignUp = () => {
         const name = form.name.value;
         const address = form.address.value;
         const email = form.email.value;
-        console.log(name , address, email);
-    }
+        const password = form.password.value;
+        console.log(name , password , address, email);
+
+ // RESET 
+        setError('')
+        setSucces('')
+// CONNECTION WITH FIREBASE
+createUser(email , password)
+.then( res =>{
+    setSucces('')
+    console.log(res.user);
+    Swal.fire({
+        title: "Congrats!",
+        text: "You have create an account successfully.",
+        icon: "success"
+      });
+
+})
+.then(error =>{
+    console.error(error);
+ 
+})
+
+
+
+
+
+
+// accessss of email&pasword 
+createUserWithEmailAndPassword(email , password)
+.then(res =>{
+    console.log(res.user);
+   
+})
+.then(error =>{
+    console.error(error);
+   
+})
+ }
+   
+
     return (
         <div>
             <div className="">
@@ -68,12 +112,13 @@ const SignUp = () => {
 			</p>
 		</div>
 	</form>
-    {/* {
-               signupError && <p className=" font-semibold text-red-500">{signupError}</p>
+    {
+               error && <p className=" font-semibold text-red-500">{error}</p>
             }
-            {
-                succes && <p className="text-green-700  font-semibol">{succes}</p>
-            } */}
+    {
+               success && <p className=" font-semibold text-green-500">{success}</p>
+            }
+           
 </div>
       
     </div>
