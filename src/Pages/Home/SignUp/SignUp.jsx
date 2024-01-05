@@ -105,7 +105,7 @@ createUserWithEmailAndPassword(email , password)
 		</div>
 		<div className="space-y-2">
 			<div>
-				<button type="submit" className="px-8 py-3 font-semibold rounded-md bg-pink-700 text-white font-serif">Sign Up</button>
+				<button type="submit" className="flex items-center  px-8 py-3 font-semibold rounded-md bg-pink-700 text-white font-serif">Sign Up</button>
                
             </div>
 			<p className="px-6 text-sm text-center text-pink-700 font-serif">Already have accout?
