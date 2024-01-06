@@ -13,6 +13,7 @@ import Buy from './Pages/Home/BuyProduct/Buy';
 import AddProduct from './Pages/Home/AddProduct/AddProduct';
 import SignUp from './Pages/Home/SignUp/SignUp';
 import Login from './Pages/Home/Login/Login';
+import ProductCard from './Pages/Home/AddProduct/ProductCard';
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,12 @@ const router = createBrowserRouter([
       {
         path:'/buylipstick',
         element:<AddProduct/>
+      },
+      {
+        path: '/productcard',
+        element:<ProductCard/>
+
+
       }
     ]
   },
