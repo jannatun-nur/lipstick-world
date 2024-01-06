@@ -6,6 +6,21 @@ const Update = ({ products }) => {
     const price = form.taget.value;
     const update = { category, price };
     console.log(update);
+
+    fetch('' ,{
+        method: 'PUT',
+        headers:{
+            'contenet-type':'application/json'
+        },
+        body:JSON.stringify(update)
+
+    })
+    .then(res =>{
+        res.json()
+    })
+    .then(data =>{
+        console.log(data);
+    })
   };
 
   return (
@@ -39,7 +54,7 @@ const Update = ({ products }) => {
             </div>
             <div>
               <div className="flex justify-between mb-2 text-white font-semibold">
-                <label className="text-sm text-gray-800 pt-2 text-xl font-semibold">
+                <label className="text-sm text-gray-800 pt-2 lg:text-xl font-semibold">
                   Price
                 </label>
               </div>
