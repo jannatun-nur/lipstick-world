@@ -1,18 +1,90 @@
 
+import { useState } from "react";
 
+import {
+//   GoogleAuthProvider,
+  getAuth,
+  signInWithEmailAndPassword,
+//   signInWithPopup,
+} from "firebase/auth";
+
+import Swal from "sweetalert2";
+import { useContext } from "react";
+
+import app from "../../../Firebase/firebase.config";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const Login = () => {
 
-    const handleSignIn = (event) =>{
-        event.preventDefault()
-        const form = event.target
-        const email = form.email.value;
-        const password = form.password.value;
-        const equal = { email , password}
-        console.log(equal);
+  const {signIn} = useContext(AuthContext)
+ 
+  const auth = getAuth(app);
+//   const googleProvider = new GoogleAuthProvider();
+
+  const [signinError, setSigninError] = useState("");
+  const [success, setSucces] = useState("");
+//   const [user , setUser] = useState(null)
+  
+
+
+//   const handleGoogle = () => {
+//     signInWithPopup(auth, googleProvider)
+//       .then((result) => {
+//         const loggedUser = result.user;
+//         console.log(loggedUser);
+//         setUser(loggedUser)
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   };
+
+
+const handleSignin = (e) => {
+    e.preventDefault();
+   
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+   
+    signIn({email, password})
+    .then(result =>{
+      console.log(result);
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+   
+    //   reset error
+    setSigninError("");
+    setSucces("");
+   
+    if (password.length < 6) {
+      setSigninError("password is less than 8 characters");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setSigninError("password do not have a capital letter");
+      return;
     }
+   
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+        setSucces();
+        Swal.fire({
+          title: "Wonderfull!!",
+          text: "You're logged in successfully",
+          icon: "success",
+        });
+        // navigate('/')
+      })
+      .catch((error) => {
+        console.log(error);
+        setSigninError(error.message);
+      });
+   };
     return (
         <div className="w-5/12 mx-auto">
-            <form onSubmit={handleSignIn}>
+            <form onSubmit={handleSignin}>
 
             <div>
 				<div className="flex justify-between mb-2 text-white font-semibold">
@@ -33,6 +105,12 @@ const Login = () => {
                 <button className="px-4 py-2 bg-pink-500 text-white rounded-lg mt-2">SignIn</button>
             </div>
             </form>
+            {
+             signinError && <p className=" font-semibold text-red-500">{signinError}</p>
+            }
+    {
+               success && <p className=" font-semibold text-green-500">{success}</p>
+            }
         </div>
     );
 };
