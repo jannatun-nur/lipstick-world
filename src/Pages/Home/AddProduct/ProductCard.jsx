@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiEdit } from "react-icons/bi";
+import Swal from "sweetalert2";
 
 const ProductCard = () => {
 
@@ -17,6 +18,23 @@ const ProductCard = () => {
         console.log(data);
         // Update the state to remove the deleted product
         setProduct(product.filter(p => p._id !== _id));
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to cancel the order??",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Delete"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your order has been deleted successfully...",
+                icon: "success"
+              });
+            }
+          });
     })
 }
 
