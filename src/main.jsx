@@ -45,7 +45,8 @@ const router = createBrowserRouter([
       },
         {
           path:'/update',
-          element:<Update/>
+          element:<Update/>,
+          
         },
       {
         path: '/productcard',

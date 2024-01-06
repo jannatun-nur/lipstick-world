@@ -1,27 +1,32 @@
 const Update = ({ products }) => {
+
   const handleUpdate = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const category = form.target.value;
-    const price = form.taget.value;
-    const update = { category, price };
-    console.log(update);
+   event.preventDefault();
+   const form = event.currentTarget;
+   const categoryInput = form.querySelector('#Usercategory');
+   const priceInput = form.querySelector('#price');
+   const category = categoryInput.value;
+   const price = priceInput.value;
+   const updateOrder = { category, price };
+   console.log(updateOrder);
 
-    fetch('' ,{
-        method: 'PUT',
-        headers:{
-            'contenet-type':'application/json'
-        },
-        body:JSON.stringify(update)
-
-    })
-    .then(res =>{
-        res.json()
-    })
-    .then(data =>{
-        console.log(data);
-    })
+   fetch(`http://localhost:5000/updates/${products._id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ updateOrder })
+  })
+  
+   .then(res => res.json())
+   .then(data => {
+     console.log(data);
+   })
+   .catch(error => {
+     console.error('Error:', error);
+   });
   };
+  
 
   return (
     <div>
