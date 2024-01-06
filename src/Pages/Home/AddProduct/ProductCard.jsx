@@ -1,15 +1,27 @@
 import { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiEdit } from "react-icons/bi";
+
 const ProductCard = () => {
+
+        
    const [product, setProduct] = useState([]);
 
-   const handleDelete = (_id) =>{
-    
-   }
+   const handleDelete = (_id) => {
+    console.log(_id);
+    fetch(`http://localhost:5000/delete/${_id}`, {
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        // Update the state to remove the deleted product
+        setProduct(product.filter(p => p._id !== _id));
+    })
+}
 
    useEffect(() => {
-       fetch('http://localhost:5000/get-allbuys')
+       fetch('http://localhost:5000/get-allbuy')
            .then(res => res.json())
            .then(data => {
                setProduct(data);
@@ -39,7 +51,7 @@ const ProductCard = () => {
                       <td className="text-xl text-gray-800 font-semibold">{products.price}</td>
                       <td className="text-xl">
                         <button className="text-red-500 pr-10"
-                        onClick={()=>{handleDelete._id}}
+                        onClick={()=>handleDelete(products._id)}
                         ><FaTrashAlt /></button>
                         <button className="text-green-500"><BiEdit /></button>
                       

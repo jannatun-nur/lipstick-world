@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: '/productcard',
         element:<ProductCard/>
-
+        // loader:({ params })=> fetch(`http://localhost:5000/get-allbuys/${params.id}`)
 
       }
     ]

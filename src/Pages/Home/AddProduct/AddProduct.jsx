@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 
@@ -18,7 +18,7 @@ const AddProduct = () => {
         const product = {name,email,category,price};
         console.log(product);
 
-        fetch('http://localhost:5000/allbuys' ,{
+        fetch(`http://localhost:5000/allbuys` ,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
