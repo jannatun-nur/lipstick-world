@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiEdit } from "react-icons/bi";
 import Swal from "sweetalert2";
+import Update from "./Update";
 
 const ProductCard = () => {
 
@@ -71,7 +72,10 @@ const ProductCard = () => {
                         <button className="text-red-500 pr-10"
                         onClick={()=>handleDelete(products._id)}
                         ><FaTrashAlt /></button>
-                        <button className="text-green-500"><BiEdit /></button>
+                      
+                        <label 
+                        htmlFor={`product-${products._id}`}
+                        className="text-green-500 btn bg-white border-none text-2xl hover:bg-white"><BiEdit /></label><Update products={products}/>
                       
                       </td>
                      

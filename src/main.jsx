@@ -14,6 +14,7 @@ import AddProduct from './Pages/Home/AddProduct/AddProduct';
 import SignUp from './Pages/Home/SignUp/SignUp';
 import Login from './Pages/Home/Login/Login';
 import ProductCard from './Pages/Home/AddProduct/ProductCard';
+import Update from './Pages/Home/AddProduct/Update';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path:'/buylipstick',
         element:<AddProduct/>
       },
+        {
+          path:'/update',
+          element:<Update/>
+        },
       {
         path: '/productcard',
         element:<ProductCard/>
