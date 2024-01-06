@@ -35,6 +35,7 @@ const router = createBrowserRouter([
         element:<Login/>
 
       },
+     
       {
         path:'/buy',
         element:<Buy/>
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <div className='bg-white'>
+    <div className='bg-white max-w-screen-xl mx-auto'>
     <RouterProvider router={router} />
     </div>
     </AuthProvider>
