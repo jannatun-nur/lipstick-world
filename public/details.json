@@ -1,0 +1,39 @@
+[
+    {
+        "image_url": "https://i.ibb.co/DLxHMV8/maybeline.jpg",
+        "name": "Maybelline",
+        "price": 79.99,
+        "in_stock": "in stock",
+        "description": "Unleash the marvel of technology with this cutting-edge tech product."
+      },
+    {
+        "image_url": "https://i.ibb.co/rk3yfw1/powder.jpg",
+        "name": "Powder Kiss ",
+        "price": 30.99,
+        "in_stock":"in stock",
+        "description": "Unleash the marvel of technology with this cutting-edge tech product."
+      },
+    {
+        "image_url": "https://i.ibb.co/wNHZGkc/retro.jpg",
+        "name": "Retro Matte",
+        "price": 42.99,
+        "in_stock": "in stock",
+        "description": "Unleash the marvel of technology with this cutting-edge tech product."
+      },
+    {
+        "image_url": "https://i.ibb.co/nPTgqxx/sartin.jpg",
+        "name": "Satin",
+        "price":35.99,
+        "in_stock":"in stock",
+        "description": "Unleash the marvel of technology with this cutting-edge tech product."
+      },
+
+    {
+        "image_url": "https://i.ibb.co/wzgZtHh/revlon.jpg",
+        "name": "Revlon",
+        "price": 59.99,
+        "in_stock":"in stock",
+        "description": "Unleash the marvel of technology with this cutting-edge tech product."
+      }
+      
+]
