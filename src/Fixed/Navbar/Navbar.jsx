@@ -9,9 +9,7 @@ const Navbar = () => {
       <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">
         <Link to="/about">About Us</Link>
       </li>
-      <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">
-        <Link to="/contact">Contact</Link>
-      </li>
+     
     </>
   );
 
