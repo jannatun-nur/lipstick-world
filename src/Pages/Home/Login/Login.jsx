@@ -13,6 +13,7 @@ import { useContext } from "react";
 
 import app from "../../../Firebase/firebase.config";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 const Login = () => {
 
   const {signIn} = useContext(AuthContext)
@@ -78,7 +79,7 @@ const handleSignin = (e) => {
 
             <div>
               <p className="text-4xl font-bold text-pink-600 text-center">Login please</p>
-				<div className="flex justify-between mb-2 text-white font-semibold">
+				<div className="flex justify-between mb-2 text-pink-600 font-semibold">
 					<label  className="text-sm">Email</label>
 					
 				</div>
@@ -86,7 +87,7 @@ const handleSignin = (e) => {
 			</div>
 
             <div>
-				<div className="flex justify-between mb-2 text-white font-semibold">
+				<div className="flex justify-between mb-2 text-pink-600 pt-2 font-semibold">
 					<label  className="text-sm">Password</label>
 					
 				</div>
@@ -96,6 +97,11 @@ const handleSignin = (e) => {
                 <button className="px-4 py-2 bg-pink-500 text-white rounded-lg mt-2">SignIn</button>
             </div>
             </form>
+
+
+            <p className=" mt-2 text-center text-2xl text-gray-800 font-bold">
+                Don't have any accout?? Go to <span className="text-pink-600 pl-2"><Link to="/signup">Sing Up</Link></span>
+              </p>
             {
              signinError && <p className=" font-semibold text-red-500">{signinError}</p>
             }
@@ -104,7 +110,7 @@ const handleSignin = (e) => {
             }
         </div>
        
-
+            
        </div>
     );
 };

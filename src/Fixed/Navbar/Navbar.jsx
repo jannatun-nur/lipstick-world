@@ -44,6 +44,7 @@ const Navbar = () => {
             </ul>
           </div>
           <img className="h-16 w-20" src={logo} alt="" />
+          <p className="text-xl font-bold text-pink-600">Lipstick World</p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
