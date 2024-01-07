@@ -15,6 +15,7 @@ import SignUp from './Pages/Home/SignUp/SignUp';
 import Login from './Pages/Home/Login/Login';
 import ProductCard from './Pages/Home/AddProduct/ProductCard';
 import Update from './Pages/Home/AddProduct/Update';
+import About from './Pages/Home/About/About';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path:'/signin',
         element:<Login/>
 
+      },
+      {
+        path:'/about',
+        element:<About/>
       },
      
       {
