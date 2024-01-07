@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-
+import image from '../../../../public/assets/image/login.jpg'
 import {
 //   GoogleAuthProvider,
   getAuth,
@@ -22,21 +22,6 @@ const Login = () => {
 
   const [signinError, setSigninError] = useState("");
   const [success, setSucces] = useState("");
-//   const [user , setUser] = useState(null)
-  
-
-
-//   const handleGoogle = () => {
-//     signInWithPopup(auth, googleProvider)
-//       .then((result) => {
-//         const loggedUser = result.user;
-//         console.log(loggedUser);
-//         setUser(loggedUser)
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       });
-//   };
 
 
 const handleSignin = (e) => {
@@ -83,10 +68,16 @@ const handleSignin = (e) => {
       });
    };
     return (
-        <div className="w-5/12 mx-auto">
+       <div  className="flex ">
+       <div>
+          <img src={image} alt="" />
+       </div>
+       
+       <div className="w-5/12 mx-auto">
             <form onSubmit={handleSignin}>
 
             <div>
+              <p className="text-4xl font-bold text-pink-600 text-center">Login please</p>
 				<div className="flex justify-between mb-2 text-white font-semibold">
 					<label  className="text-sm">Email</label>
 					
@@ -112,6 +103,9 @@ const handleSignin = (e) => {
                success && <p className=" font-semibold text-green-500">{success}</p>
             }
         </div>
+       
+
+       </div>
     );
 };
 
