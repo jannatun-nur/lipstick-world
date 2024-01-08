@@ -3,16 +3,16 @@ import logo from '../../../../public/assets/image/logo.png'
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-pink-200 text-neutral-content">
+      <footer className="footer bg-pink-200 text-neutral-content">
         <aside>
-         <img className='h-24 w-24' src={logo} alt="" />
-          <p className='text-2xl text-pink-600 font-bold'>
+         <img className='h-14 w-14 lg:h-24 lg:w-24' src={logo} alt="" />
+          <p className='text-sm lg:text-2xl text-pink-600 font-bold'>
            Lipstick World
             
           </p>
         </aside>
         <nav>
-          <header className="text-4xl text-pink-600 font-bold">Social</header>
+          <header className="text-xl lg:text-4xl text-pink-600 font-bold">Social</header>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg

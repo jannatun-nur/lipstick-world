@@ -22,7 +22,7 @@ const BuyCard = ({ buys}) => {
  const { name, image , title ,price, in_stock, button } = buys;
  return (
    <div className="">
-     <div className="rounded-md shadow-md sm:w-52 bg-white text-pink-700 border border-black">
+     <div className="rounded-md shadow-md mb-2 w-9/12 lg:w-52 bg-white text-pink-700 border border-black">
        
        <img
          src={image}
@@ -40,17 +40,17 @@ const BuyCard = ({ buys}) => {
          <div className="text-black font-semibold">
            <div>
            <p className="text-sm">
-             <span className="text-xl font-semibold">{name}</span>
+             <span className="text-sm lg:text-xl font-bold">{name}</span>
            </p>
           
            </div>
-           <p>
+           <p className="text-sm lg:text-xl font-bold">
                {title}
            </p>
-          <p>
+          <p className="text-sm lg:text-xl font-bold">
            ${price}
           </p>
-          <p>
+          <p className="text-sm lg:text-xl font-bold">
            {in_stock}
           </p>
          </div>
@@ -58,7 +58,7 @@ const BuyCard = ({ buys}) => {
         <button 
       
         onClick={handleClick}
-        className="px-2 border border-pink-500 rounded-lg mt-2 text-2xl font-bold">{button}</button>
+        className=" px-2  border border-pink-500 rounded-lg mt-2 text-sm lg:text-2xl font-bold">{button}</button>
         </Link>
        </div>
      </div>

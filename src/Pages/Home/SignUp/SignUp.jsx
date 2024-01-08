@@ -75,7 +75,7 @@ createUserWithEmailAndPassword(email , password)
             <div className="bg-[#f4f4f4]">
   <div className=" flex justify-around">
     <div className=" mt-10">
-        <img src={image} alt="image" />
+        <img className="h-28 w-full mt-28 lg:w-full lg:h-72 lg:mt-0" src={image} alt="image" />
     </div>
    
     <div className="w-1/2  text-gray-800">
@@ -84,44 +84,44 @@ createUserWithEmailAndPassword(email , password)
 		
 		<p className="text-sm lg:text-2xl text-pink-700 border border-x-pink-600 font-bold">Sign Up to access your account</p>
 	</div>
-	<form  onSubmit={handleSignup} className="space-y-12">
-		<div className="space-y-4">
+	<form  onSubmit={handleSignup} className="space-y-2 lg:space-y-12">
+		<div className=" space-y-0 lg:space-y-4">
         <div>
-				<div className="flex justify-between mb-2 text-white font-semibold">
+				<div className="flex justify-between mb-0 lg:mb-2 text-white font-semibold">
 					<label  className="text-sm text-white font-semibold">Name</label>
 					
 				</div>
-				<input type="Username" name="name" id="Username" placeholder="Username" className="w-full px-3 py-2 border rounded-md bg-white  border-pink-600 hover:boder-pink-300" />
+				<input type="Username" name="name" id="Username" placeholder="Username" className="w-full px-1 lg:px-3 lg:py-2 border rounded-md bg-white  border-pink-600 hover:boder-pink-300" />
 			</div>
 			<div>
-				<div className="flex justify-between mb-2 text-white font-semibold">
+				<div className="flex justify-between mb-0 lg:mb-2 text-white font-semibold">
 					<label  className="text-sm">Address</label>
 					
 				</div>
-				<input type="address" name="address" id="address" placeholder="address" className="w-full px-3 py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300" />
+				<input type="address" name="address" id="address" placeholder="address" className="w-full px-1 lg:px-3 lg:py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300" />
 			</div>
 			<div>
-				<label  className="block mb-2 text-sm text-white font-semibold">Email address</label>
-				<input type="email" name="email" id="email" placeholder="@gmail.com" className="w-full px-3 py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300" />
+				<label  className="block mb-0 lg:mb-2 text-sm text-white font-semibold">Email address</label>
+				<input type="email" name="email" id="email" placeholder="@gmail.com" className="w-full px-1 lg:px-3 lg:py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300" />
 			</div>
 			<div>
 				<div className="flex justify-between mb-2 text-white font-semibold">
 					<label  className="text-sm">Confirm Password</label>
 					
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300 " />
+				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-1 lg:px-3 lg:py-2 bg-white rounded-md border border-pink-600 hover:boder-pink-300 " />
 			</div>
 			
 		</div>
-		<div className="space-y-2">
+		<div className="space-y-0 lg:space-y-2">
 			<div>
-				<button type="submit" className="flex items-center  px-8 py-3 font-semibold rounded-md bg-pink-700 text-white lg:font-bold">Sign Up</button>
+				<button type="submit" className="flex items-center px-4 lg:px-8 lg:py-3 font-semibold rounded-md bg-pink-700 text-white lg:font-bold">Sign Up</button>
                
             </div>
-			<p className="px-6 text-sm text-center text-gray-800 font-bold lg:text-2xl">Already have accout?....Go to <span className="font-bold text-pink-600 ">
+			<p className="lg:px-6 text-sm text-center text-gray-800 font-bold lg:text-2xl">Already have accout?....Go to <span className="font-bold text-pink-600 ">
                 <Link to="/signin">Sign In</Link>
             </span>
-				{/* <Link to="/login">Login Here</Link> */}
+				
 			</p>
 		</div>
 	</form>
