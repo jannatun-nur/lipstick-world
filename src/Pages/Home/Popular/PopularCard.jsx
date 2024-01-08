@@ -33,9 +33,7 @@ const PopularCard = ({ populars }) => {
           <span className="mt-2"> <FaBox /></span> {in_stock}
            </p>
           </div>
-         <Link to="buylipstick">
-         <button className="px-2 border border-pink-500 rounded-lg mt-2 font-semibold"></button>
-         </Link>
+         
         </div>
       </div>
     </div>

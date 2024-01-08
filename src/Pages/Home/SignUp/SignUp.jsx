@@ -3,6 +3,7 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import image from '../../../../public/assets/image/signup.jpg'
+import { Link } from "react-router-dom";
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const SignUp = () => {
@@ -42,6 +43,15 @@ createUser(email , password)
  
 })
 
+if(password.length <6){
+    setError('password is less than 8 characters')
+    return
+}
+else if(!/[A-Z]/.test(password)){
+    setError('password do not have capital letter ')
+    return
+}
+
 
 
 
@@ -72,7 +82,7 @@ createUserWithEmailAndPassword(email , password)
     <div className="flex flex-col max-auto p-6 rounded-md sm:p-10 w-full">
 	<div className="mb-8 text-center">
 		
-		<p className="text-sm lg:text-2xl text-pink-700 border border-x-pink-600 font-serif">Sign Up to access your account</p>
+		<p className="text-sm lg:text-2xl text-pink-700 border border-x-pink-600 font-bold">Sign Up to access your account</p>
 	</div>
 	<form  onSubmit={handleSignup} className="space-y-12">
 		<div className="space-y-4">
@@ -105,16 +115,18 @@ createUserWithEmailAndPassword(email , password)
 		</div>
 		<div className="space-y-2">
 			<div>
-				<button type="submit" className="flex items-center  px-8 py-3 font-semibold rounded-md bg-pink-700 text-white font-serif">Sign Up</button>
+				<button type="submit" className="flex items-center  px-8 py-3 font-semibold rounded-md bg-pink-700 text-white lg:font-bold">Sign Up</button>
                
             </div>
-			<p className="px-6 text-sm text-center text-pink-700 font-serif">Already have accout?
+			<p className="px-6 text-sm text-center text-gray-800 font-bold lg:text-2xl">Already have accout?....Go to <span className="font-bold text-pink-600 ">
+                <Link to="/signin">Sign In</Link>
+            </span>
 				{/* <Link to="/login">Login Here</Link> */}
 			</p>
 		</div>
 	</form>
     {
-               error && <p className=" font-semibold text-red-500">{error}</p>
+               error && <p className=" text-xl font-bold text-red-500">{error}</p>
             }
     {
                success && <p className=" font-semibold text-green-500">{success}</p>

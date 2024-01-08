@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../../../public/assets/image/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
+
+  const {user , logout} = useContext(AuthContext)
   const navlinks = (
     <>
       <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">
@@ -41,13 +45,21 @@ const Navbar = () => {
               {navlinks}
             </ul>
           </div>
-          <img className="h-16 w-20" src={logo} alt="" />
-          <p className="text-xl font-bold text-pink-600">Lipstick World</p>
+          <img className="h-10 w-10 lg:h-16 lg:w-20" src={logo} alt="" />
+          <p className=" text-sm lg:text-xl font-bold text-pink-600">Lipstick World</p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
-            <Link to="/signin" className="text-xl text-white bg-pink-600 px-4 py-2 rounded-2xl">Sign In</Link></div>
+        
+        {
+      user?.email ? 
+      <button onClick={logout} className="px-4 py-2 text-white bg-pink-600 text-2xl font-semibold rounded-lg">LogOut</button>
+      :
+      <Link className=" px-2 py-1 text-sm lg:px-4 lg:py-2 text-white bg-pink-600 lg:text-2xl font-semibold rounded-lg" to="/signin">Sign In</Link>
+    }
+            
+            </div>
       </div>
    
   );

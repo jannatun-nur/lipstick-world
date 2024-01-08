@@ -1,5 +1,8 @@
 
 import Banner from "./Banner/Banner";
+import Buy from "./BuyProduct/Buy";
+
+
 import Popular from "./Popular/Popular";
 
 const Home = () => {
@@ -7,7 +10,8 @@ const Home = () => {
         <div>
           <Banner/>
           <Popular/>
-          
+          <Buy/>
+      
         </div>
     );
 };
