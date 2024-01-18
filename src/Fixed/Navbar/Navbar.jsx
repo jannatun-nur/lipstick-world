@@ -3,8 +3,7 @@ import logo from "../../../public/assets/image/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
-
-  const {user , logout} = useContext(AuthContext)
+  const { user, logout } = useContext(AuthContext);
   const navlinks = (
     <>
       <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">
@@ -13,7 +12,6 @@ const Navbar = () => {
       <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">
         <Link to="/about">About Us</Link>
       </li>
-     
     </>
   );
 
@@ -46,22 +44,25 @@ const Navbar = () => {
             </ul>
           </div>
           <img className="h-10 w-10 lg:h-16 lg:w-20" src={logo} alt="" />
-          <p className=" text-sm lg:text-xl font-bold text-pink-600">Lipstick World</p>
+          <p className=" text-sm lg:text-xl font-bold text-pink-600">
+            Lipstick World
+          </p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
-        
-        {
-      user?.email ? 
-      <button onClick={logout} className="px-4 py-2 text-white bg-pink-600 text-2xl font-semibold rounded-lg">LogOut</button>
-      :
-      <Link className=" px-2 py-1 text-sm lg:px-4 lg:py-2 text-white bg-pink-600 lg:text-2xl font-semibold rounded-lg" to="/signin">Sign In</Link>
-    }
-            
-            </div>
+
+        {user?.email ? (
+              <li className=" px-2 flex">
+                 <button className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg"><Link to="/productcard">My Order</Link></button>
+                <button onClick={logout} className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg">LogOut</button>
+
+              </li>
+            ) : (
+              <li className="px-4 py-2  text-pink-600 text-2xl font-semibold rounded-lg"><Link to="/signin">Sign In</Link></li>
+            )}
       </div>
-   
+    </div>
   );
 };
 

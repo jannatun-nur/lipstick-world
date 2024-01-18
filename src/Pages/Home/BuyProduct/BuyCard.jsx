@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+
 import PropTypes from 'prop-types';
-import { useContext } from "react";
-import { AuthContext } from "../../../Provider/AuthProvider";
+import { Link } from 'react-router-dom';
+
 
 
 const BuyCard = ({ buys}) => {
@@ -9,15 +9,10 @@ const BuyCard = ({ buys}) => {
  if (!buys) {
    return null; // or return a loading spinner, etc.
  }
- const navigate = useNavigate()
- const {user} = useContext(AuthContext)
+
 
  const handleClick = () => {
-  if (user?.email) {
-    navigate('/buylipstick');
-  } else {
-    navigate('/signin');
-  }
+ 
 };
  const { name, image , title ,price, in_stock, button } = buys;
  return (

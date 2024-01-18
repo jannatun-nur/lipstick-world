@@ -40,7 +40,7 @@ const ProductCard = () => {
 }
 
    useEffect(() => {
-       fetch('http://localhost:5000/get-allbuy')
+       fetch('http://localhost:5000/get-allbuys')
            .then(res => res.json())
            .then(data => {
                setProduct(data);

@@ -25,21 +25,27 @@ const Login = () => {
   const [success, setSucces] = useState("");
 
 
-const handleSignin = (e) => {
+  const handleSignin = (e) => {
     e.preventDefault();
-   
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
-   
-    signIn({email, password})
-    .then(result =>{
-      console.log(result);
-    })
-    .catch(error =>{
-      console.error(error)
-    })
-   
+  
+    // Check if signIn is a function before calling it
+    if (typeof signIn === 'function') {
+      signIn({ email, password })
+        .then(result => {
+          // Handle success
+        })
+        .catch(error => {
+          setSigninError(error.message);
+        });
+    } else {
+      console.error('signIn is not a function');
+      setSigninError('An error occurred during sign in. Please try again later.');
+    }
+  
+    // ... rest of your code
+
     //   reset error
     setSigninError("");
     setSucces("");

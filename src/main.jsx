@@ -34,13 +34,11 @@ const router = createBrowserRouter([
       {
         path:'/signin',
         element:<Login/>
-
       },
       {
         path:'/about',
         element:<About/>
       },
-     
       {
         path:'/buy',
         element:<Buy/>
@@ -49,21 +47,17 @@ const router = createBrowserRouter([
         path:'/buylipstick',
         element:<AddProduct/>
       },
-        {
-          path:'/update',
-          element:<Update/>,
-          
-        },
+      {
+        path:'/update',
+        element:<Update/>,
+      },
       {
         path: '/productcard',
         element:<ProductCard/>
-        
-
       }
     ]
   },
-]);
-
+ ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
